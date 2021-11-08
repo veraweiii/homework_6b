@@ -80,9 +80,6 @@ function displayWish() {
             <div>
                 <button class="remove-btn" onClick=removeWish(`+ i + `)>Remove</button>
             </div>
-            <div>
-                <button class="move-cart-btn" onClick="removeWish(`+ i + `)">Move to Cart</button>
-            </div>
         </div>
     </div>
     <div class="cart-item-price">`+ (wishlist[i].price) + `</div>
