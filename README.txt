@@ -12,4 +12,5 @@ Font Citations:
 - https://fonts.google.com/specimen/Barlow
 
 New Features for 6B:
-- Cart can dynamically update
+- Ability to remove items from Cart
+- Wishlist, where items can be removed or added to from cart list
