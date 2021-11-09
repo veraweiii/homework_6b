@@ -27,7 +27,6 @@ function updateCartLabel() {
         let itemCount = 0;
         for (let i = 0; i < cartSize; i++) {
             let itemName = document.getElementsByClassName("item-header")[0].innerHTML + " Cinnamon Roll";
-            console.log(itemName);
             if (cartArray[i].type == itemName) {
                 itemCount++;
                 document.getElementById("quantity-in-cart").innerHTML = itemCount + " of this item in your cart!";
@@ -98,6 +97,54 @@ if (document.getElementsByClassName("item-header")[0].innerHTML == "Original") {
             document.getElementsByClassName("item-image")[0].src = "img/glaze/pumpkin-sugar.png";
         }
     });
+} else if (document.getElementsByClassName("item-header")[0].innerHTML == "Blackberry") {
+    document.getElementById("glazing").addEventListener("change", function () {
+        if (document.getElementById("none").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/blackberry.png";
+        } else if (document.getElementById("double-chocolate").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/blackberry-chocolate.png";
+        } else if (document.getElementById("vanilla-milk").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/blackberry-vanilla.png";
+        } else if (document.getElementById("sugar-milk").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/blackberry-sugar.png";
+        }
+    });
+} else if (document.getElementsByClassName("item-header")[0].innerHTML == "Original Gluten-Free") {
+    document.getElementById("glazing").addEventListener("change", function () {
+        if (document.getElementById("none").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/gluten-free.png";
+        } else if (document.getElementById("double-chocolate").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/glutenfree-chocolate.png";
+        } else if (document.getElementById("vanilla-milk").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/glutenfree-vanilla.png";
+        } else if (document.getElementById("sugar-milk").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/glutenfree-sugar.png";
+        }
+    });
+} else if (document.getElementsByClassName("item-header")[0].innerHTML == "Walnut") {
+    document.getElementById("glazing").addEventListener("change", function () {
+        if (document.getElementById("none").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/walnut.png";
+        } else if (document.getElementById("double-chocolate").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/walnut-chocolate.png";
+        } else if (document.getElementById("vanilla-milk").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/walnut-vanilla.png";
+        } else if (document.getElementById("sugar-milk").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/walnut-sugar.png";
+        }
+    });
+} else if (document.getElementsByClassName("item-header")[0].innerHTML == "Caramel Pecan") {
+    document.getElementById("glazing").addEventListener("change", function () {
+        if (document.getElementById("none").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/caramel-pecan.png";
+        } else if (document.getElementById("double-chocolate").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/caramel-chocolate.png";
+        } else if (document.getElementById("vanilla-milk").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/caramel-vanilla.png";
+        } else if (document.getElementById("sugar-milk").checked) {
+            document.getElementsByClassName("item-image")[0].src = "img/glaze/caramel-sugar.png";
+        }
+    });
 }
 
 
@@ -128,6 +175,10 @@ document.getElementById("cart-btn").addEventListener("click", function () {
             img = "img/blackberry.png";
         } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Original Gluten-Free") {
             img = "img/gluten-free.png";
+        } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Walnut") {
+            img = "img/walnut.png";
+        } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Caramel Pecan") {
+            img = "img/caramel-pecan.png";
         } 
     } else if (document.getElementById("double-chocolate").checked) {
         glaze = "Double Chocolate";
@@ -139,6 +190,10 @@ document.getElementById("cart-btn").addEventListener("click", function () {
             img = "img/glaze/blackberry-chocolate.png";
         } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Original Gluten-Free") {
             img = "img/glaze/glutenfree-chocolate.png";
+        } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Walnut") {
+            img = "img/glaze/walnut-chocolate.png";
+        } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Caramel Pecan") {
+            img = "img/glaze/caramel-chocolate.png";
         } 
     } else if (document.getElementById("vanilla-milk").checked) {
         glaze = "Vanilla Milk";
@@ -150,6 +205,10 @@ document.getElementById("cart-btn").addEventListener("click", function () {
             img = "img/glaze/blackberry-vanilla.png";
         } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Original Gluten-Free") {
             img = "img/glaze/glutenfree-vanilla.png";
+        } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Walnut") {
+            img = "img/glaze/walnut-vanilla.png";
+        } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Caramel Pecan") {
+            img = "img/glaze/caramel-vanilla.png";
         } 
     } else if (document.getElementById("sugar-milk").checked) {
         glaze = "Sugar Milk";
@@ -161,7 +220,12 @@ document.getElementById("cart-btn").addEventListener("click", function () {
             img = "img/glaze/blackberry-sugar.png";
         } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Original Gluten-Free") {
             img = "img/glaze/glutenfree-sugar.png";
+        } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Walnut") {
+            img = "img/glaze/walnut-sugar.png";
+        } else if (document.getElementsByClassName("item-header")[0].innerHTML == "Caramel Pecan") {
+            img = "img/glaze/caramel-sugar.png";
         } 
+
     }
 
     let newRoll = new roll(
