@@ -14,3 +14,4 @@ Font Citations:
 New Features for 6B:
 - Ability to remove items from Cart
 - Wishlist, where items can be removed or added to from cart list
+- 
